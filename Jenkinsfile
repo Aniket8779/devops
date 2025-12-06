@@ -8,11 +8,11 @@ pipeline {
           }
     stage('Deploy to apache') {
        steps {
-         sh "
+         sh """
              sudo rm -rf /var/www/html/*
              sudo cp -r * /var/www/html/
              sudo chown -R www-data:www-data /var/www/html
-             "
+             """
               }
        }
     }
